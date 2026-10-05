@@ -1,0 +1,72 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PromotionalBar from '../components/PromotionalBar.astro';
+import Header from '../components/Header.astro';
+import HeroSection from '../components/HeroSection.astro';
+import CapabilityStrip from '../components/CapabilityStrip.astro';
+import WhyXSUS from '../components/WhyXSUS.astro';
+import GlobalNodes from '../components/GlobalNodes.astro';
+import SupportedApps from '../components/SupportedApps.astro';
+import HowItWorks from '../components/HowItWorks.astro';
+import KnowledgeBase from '../components/KnowledgeBase.astro';
+import BuyingGuide from '../components/BuyingGuide.astro';
+import UseCases from '../components/UseCases.astro';
+import PricingCTA from '../components/PricingCTA.astro';
+import FAQSection, { FAQ_LIST } from '../components/FAQSection.astro';
+import FinalCTA from '../components/FinalCTA.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout
+  title="XSUS 十八线小机场｜机场推荐、Clash 与 Shadowrocket 网络节点"
+  description="XSUS 十八线小机场提供香港、台湾、日本、新加坡、美国等常用地区节点，支持 Clash Verge、Clash Meta、Shadowrocket 等客户端。了解机场订阅、节点选择与使用方法。"
+  canonicalUrl="https://vpnxsus.homes/"
+  faqs={FAQ_LIST}
+>
+  <!-- 01 Promotional Bar -->
+  <PromotionalBar />
+
+  <!-- 02 Header Navigation -->
+  <Header />
+
+  <main>
+    <!-- 03 Hero Section -->
+    <HeroSection />
+
+    <!-- 04 Capability Strip -->
+    <CapabilityStrip />
+
+    <!-- 05 Why XSUS -->
+    <WhyXSUS />
+
+    <!-- 06 Global Nodes -->
+    <GlobalNodes />
+
+    <!-- 07 Supported Apps -->
+    <SupportedApps />
+
+    <!-- 08 How It Works -->
+    <HowItWorks />
+
+    <!-- 09 什么是机场 -->
+    <KnowledgeBase />
+
+    <!-- 10 如何选择机场 -->
+    <BuyingGuide />
+
+    <!-- 11 Use Cases -->
+    <UseCases />
+
+    <!-- 12 Pricing CTA -->
+    <PricingCTA />
+
+    <!-- 13 FAQ -->
+    <FAQSection />
+
+    <!-- 14 Final CTA -->
+    <FinalCTA />
+  </main>
+
+  <!-- 15 Footer -->
+  <Footer />
+</Layout>

@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" fill="none">
+  <defs>
+    <linearGradient id="og-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#080318" />
+      <stop offset="50%" stop-color="#18073A" />
+      <stop offset="100%" stop-color="#0c0420" />
+    </linearGradient>
+    <linearGradient id="og-accent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFD15C" />
+      <stop offset="100%" stop-color="#FFB800" />
+    </linearGradient>
+    <linearGradient id="og-brand" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#C084FC" />
+      <stop offset="50%" stop-color="#8B5CF6" />
+      <stop offset="100%" stop-color="#6D28D9" />
+    </linearGradient>
+    <radialGradient id="og-glow" cx="60%" cy="40%" r="50%">
+      <stop offset="0%" stop-color="#7C3AED" stop-opacity="0.35" />
+      <stop offset="100%" stop-color="#7C3AED" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#og-bg)" />
+  <rect width="1200" height="630" fill="url(#og-glow)" />
+
+  <!-- Cyber Grid Lines -->
+  <g stroke="rgba(124, 58, 237, 0.12)" stroke-width="1">
+    <line x1="0" y1="100" x2="1200" y2="100" />
+    <line x1="0" y1="200" x2="1200" y2="200" />
+    <line x1="0" y1="300" x2="1200" y2="300" />
+    <line x1="0" y1="400" x2="1200" y2="400" />
+    <line x1="0" y1="500" x2="1200" y2="500" />
+    <line x1="200" y1="0" x2="200" y2="630" />
+    <line x1="400" y1="0" x2="400" y2="630" />
+    <line x1="600" y1="0" x2="600" y2="630" />
+    <line x1="800" y1="0" x2="800" y2="630" />
+    <line x1="1000" y1="0" x2="1000" y2="630" />
+  </g>
+
+  <!-- Brand Badge Top Left -->
+  <g transform="translate(100, 90)">
+    <rect width="260" height="42" rx="21" fill="rgba(109, 40, 217, 0.35)" stroke="#8B5CF6" stroke-width="1.5" />
+    <circle cx="24" cy="21" r="5" fill="#34D399" />
+    <text x="38" y="26" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="14" font-weight="bold" fill="#DDD6FE" letter-spacing="1.5">XSUS · 十八线小机场</text>
+  </g>
+
+  <!-- Main Headline -->
+  <text x="100" y="240" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="56" font-weight="900" fill="#FFFFFF">
+    稳定连接，没有那么复杂。
+  </text>
+
+  <!-- Subheadline -->
+  <text x="100" y="320" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="24" font-weight="normal" fill="#C4B5FD">
+    常用地区核心节点 · Clash / Shadowrocket 快速订阅 · 全平台支持
+  </text>
+
+  <!-- Node Badges -->
+  <g transform="translate(100, 390)">
+    <rect width="130" height="48" rx="12" fill="rgba(34, 11, 77, 0.8)" stroke="#7C3AED" stroke-width="1.5" />
+    <text x="65" y="30" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="16" font-weight="bold" fill="#FFFFFF">🇭🇰 香港</text>
+    
+    <rect x="150" width="130" height="48" rx="12" fill="rgba(34, 11, 77, 0.8)" stroke="#7C3AED" stroke-width="1.5" />
+    <text x="215" y="30" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="16" font-weight="bold" fill="#FFFFFF">🇹🇼 台湾</text>
+
+    <rect x="300" width="130" height="48" rx="12" fill="rgba(34, 11, 77, 0.8)" stroke="#7C3AED" stroke-width="1.5" />
+    <text x="365" y="30" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="16" font-weight="bold" fill="#FFFFFF">🇯🇵 日本</text>
+
+    <rect x="450" width="130" height="48" rx="12" fill="rgba(34, 11, 77, 0.8)" stroke="#7C3AED" stroke-width="1.5" />
+    <text x="515" y="30" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="16" font-weight="bold" fill="#FFFFFF">🇸🇬 新加坡</text>
+
+    <rect x="600" width="130" height="48" rx="12" fill="rgba(34, 11, 77, 0.8)" stroke="#7C3AED" stroke-width="1.5" />
+    <text x="665" y="30" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="16" font-weight="bold" fill="#FFFFFF">🇺🇸 美国</text>
+  </g>
+
+  <!-- Bottom Bar with Logo & Domain -->
+  <g transform="translate(100, 520)">
+    <!-- XSUS Icon -->
+    <rect width="44" height="44" rx="12" fill="#100526" stroke="#8B5CF6" stroke-width="2" />
+    <path d="M12 12L32 32M32 12L12 32" stroke="url(#og-brand)" stroke-width="4" stroke-linecap="round" />
+    <circle cx="22" cy="22" r="3" fill="#FFB800" />
+    
+    <text x="58" y="30" font-family="-apple-system, BlinkMacSystemFont, monospace" font-size="24" font-weight="900" fill="#FFFFFF" letter-spacing="1">XSUS</text>
+    <text x="150" y="30" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="16" font-weight="500" fill="#A78BFA">| vpnxsus.homes</text>
+  </g>
+</svg>

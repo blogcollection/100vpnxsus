@@ -1,0 +1,75 @@
+---
+const useCases = [
+  {
+    title: '海外网站与资讯',
+    desc: '顺畅浏览全球主流科技媒体、新闻网站、维基百科与专业技术社区，获取第一手前沿资讯。',
+    icon: `<svg class="w-6 h-6 text-brand-glow" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/></svg>`
+  },
+  {
+    title: 'AI 工具与生产力',
+    desc: '辅助日常办公、编程写代码与内容创作，连接各类现代 AI 大语言模型与云端效率套件。',
+    icon: `<svg class="w-6 h-6 text-brand-glow" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>`
+  },
+  {
+    title: '视频与在线学习',
+    desc: '观看海外高清公开课、技术演讲、教程视频与创作者分享，提升知识视野与专业技能。',
+    icon: `<svg class="w-6 h-6 text-brand-glow" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>`
+  },
+  {
+    title: '海外办公与协作',
+    desc: '跨国团队远程通讯、GitHub 源码同步、海外云服务后台运维及国际邮件顺畅收发。',
+    icon: `<svg class="w-6 h-6 text-brand-glow" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>`
+  },
+  {
+    title: '学术研究与论文检索',
+    desc: '高校师生快速检索 IEEE、ScienceDirect、Google Scholar、arXiv 等学术期刊与文献库。',
+    icon: `<svg class="w-6 h-6 text-brand-glow" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>`
+  },
+  {
+    title: '社交平台与通讯',
+    desc: '与海外朋友、客户及全球社群保持实时沟通，接收最新应用推送与社群动态。',
+    icon: `<svg class="w-6 h-6 text-brand-glow" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg>`
+  },
+];
+---
+
+<section class="py-20 lg:py-28 bg-[#0c0420] relative">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Section Header -->
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-900/40 border border-purple-500/30 text-xs font-semibold text-brand-soft mb-4">
+        <span>MULTI-PURPOSE USAGE</span>
+      </div>
+      <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white tracking-tight mb-4">
+        一个订阅，可以覆盖很多日常场景
+      </h2>
+      <p class="text-base sm:text-lg text-gray-300">
+        无论是日常学习、外贸办公还是全球技术探索，XSUS 提供平稳可靠的底层网络支撑。
+      </p>
+    </div>
+
+    <!-- 6 Cards Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+      {useCases.map((item) => (
+        <div class="glass-card rounded-2xl p-6 hover:border-purple-400/40 transition-all duration-300 group">
+          <div class="w-12 h-12 rounded-xl bg-purple-900/40 border border-purple-500/30 flex items-center justify-center mb-4 group-hover:scale-105 transition-transform" set:html={item.icon} />
+          <h3 class="text-lg font-bold text-white mb-2 group-hover:text-brand-soft transition-colors">
+            {item.title}
+          </h3>
+          <p class="text-xs sm:text-sm text-gray-300 leading-relaxed">
+            {item.desc}
+          </p>
+        </div>
+      ))}
+    </div>
+
+    <!-- Compliance / Objective Disclaimer Note -->
+    <div class="text-center max-w-2xl mx-auto">
+      <p class="text-xs text-gray-400 leading-normal">
+        * 注：实际可用情况可能受到节点所处机房网络状态、第三方服务商风控规则与 IP 状态等多种外部因素影响。
+      </p>
+    </div>
+
+  </div>
+</section>

@@ -1,0 +1,90 @@
+---
+const factors = [
+  {
+    num: '01',
+    title: '持续稳定性',
+    desc: '对于日常工作与学习，连接不频繁断连、IP 不频繁异常变动，远比偶尔测出的极端峰值带宽更重要。',
+  },
+  {
+    num: '02',
+    title: '晚高峰网络表现',
+    desc: '每晚 20:00 - 23:00 是国际骨干网拥堵高峰，优秀的服务商会通过优化出口路由来缓解丢包与拥塞。',
+  },
+  {
+    num: '03',
+    title: '真实延迟与网络抖动',
+    desc: '物理距离决定基础延迟。更应关注延迟曲线的平稳度（Jitter 抖动），避免网页频繁加载停滞。',
+  },
+  {
+    num: '04',
+    title: '客户端协议兼容性',
+    desc: '选择支持通用订阅格式的服务，确保在 Clash Verge、Shadowrocket、Clash Meta 等工具间轻松迁移。',
+  },
+  {
+    num: '05',
+    title: '多设备使用场景',
+    desc: '根据日常主力设备（如 Mac + iPhone，或 Windows + Android）选择支持多端同时在线的订阅方案。',
+  },
+  {
+    num: '06',
+    title: '核心地区覆盖度',
+    desc: '节点数量不在多而在精。95% 以上日常网络需求集中在香港、日本、新加坡、美国等少数核心区域。',
+  },
+  {
+    num: '07',
+    title: '清晰文档与服务支持',
+    desc: '拥有完善的新手配置教程与快速响应渠道，在遇到网络波动或客户端异常时能及时获取协助。',
+  },
+  {
+    num: '08',
+    title: '合理的定价与成本',
+    desc: '优质国际带宽需要机房与光缆成本支撑。过低价格往往伴随超卖和频繁维护，理性按需选购即可。',
+  },
+];
+---
+
+<section id="guide" class="py-20 lg:py-28 bg-[#080318] relative bg-network-grid">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Section Header -->
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-900/40 border border-purple-500/30 text-xs font-semibold text-brand-soft mb-4">
+        <span>BUYER'S ADVICE</span>
+      </div>
+      <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white tracking-tight mb-4">
+        选择机场时，不应该只看节点数量
+      </h2>
+      <p class="text-base sm:text-lg text-gray-300">
+        网络质量是一项综合体验。了解这 8 个关键考量维度，帮助你找到最适合自己的网络方案。
+      </p>
+    </div>
+
+    <!-- 8 Factors Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+      {factors.map((item) => (
+        <div class="glass-card rounded-2xl p-6 flex flex-col justify-between hover:border-purple-400/40 transition-all duration-300">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="font-mono text-sm font-bold text-accent px-2 py-0.5 bg-accent/10 rounded">
+                DIMENSION {item.num}
+              </span>
+            </div>
+            <h3 class="text-base font-bold text-white mb-2">{item.title}</h3>
+            <p class="text-xs sm:text-sm text-gray-300 leading-relaxed">
+              {item.desc}
+            </p>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <!-- Rational Neutral Conclusion Callout -->
+    <div class="bg-gradient-to-r from-purple-950/80 via-[#18073a] to-purple-950/80 border border-purple-600/30 rounded-2xl p-6 sm:p-8 text-center max-w-4xl mx-auto">
+      <h4 class="text-lg font-bold text-white mb-2">理性看待机场服务与配置</h4>
+      <p class="text-xs sm:text-sm text-gray-300 leading-relaxed">
+        节点数量多，不代表网络质量一定更好；价格极低，也不意味着一定适合长期稳定使用。XSUS 始终坚持透明、克制与务实的产品理念，先把日常核心连接做好，成为你在日常工作与学习中稳定可靠的网络助手。
+      </p>
+    </div>
+
+  </div>
+</section>

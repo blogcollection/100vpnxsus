@@ -1,0 +1,251 @@
+---
+import { SITE_CONFIG } from '../config/site';
+
+const nodesList = [
+  {
+    region: '香港',
+    en: 'Hong Kong (HK)',
+    flag: '🇭🇰',
+    zone: 'ASIA NETWORK',
+    badge: '主力亚太节点',
+    desc: '地理位置近，物理距离短，适合低延迟网页浏览与即时通讯',
+    features: ['超低物理延迟', 'BGP 优化接入', '日常主力推荐'],
+    status: 'ONLINE',
+  },
+  {
+    region: '台湾',
+    en: 'Taiwan (TW)',
+    flag: '🇹🇼',
+    zone: 'ASIA NETWORK',
+    badge: '优质备用节点',
+    desc: '华语网络访问友好，本地化服务连接顺畅',
+    features: ['繁体中文生态', '亚太优质备份', '稳定流转'],
+    status: 'ONLINE',
+  },
+  {
+    region: '日本',
+    en: 'Japan (JP - Tokyo)',
+    flag: '🇯🇵',
+    zone: 'ASIA NETWORK',
+    badge: '高速亚太节点',
+    desc: '国际出口带宽充沛，适合影音流媒体与跨国协同办公',
+    features: ['东京机房直连', '大带宽储备', 'AI 平台兼容'],
+    status: 'ONLINE',
+  },
+  {
+    region: '新加坡',
+    en: 'Singapore (SG)',
+    flag: '🇸🇬',
+    zone: 'ASIA NETWORK',
+    badge: '东南亚枢纽',
+    desc: '东南亚骨干网络枢纽，国际互联路由稳定',
+    features: ['东南亚核心枢纽', '多线 BGP 接入', '全天候平稳'],
+    status: 'ONLINE',
+  },
+  {
+    region: '美国',
+    en: 'United States (US)',
+    flag: '🇺🇸',
+    zone: 'NORTH AMERICA',
+    badge: '北美核心节点',
+    desc: '原生北美网络环境，适合访问美国本土学术与企业服务',
+    features: ['原生北美 IP', '学术研究首选', '欧美服务友好'],
+    status: 'ONLINE',
+  },
+];
+---
+
+<section id="nodes" class="py-20 lg:py-28 bg-[#080318] relative overflow-hidden bg-network-grid">
+  <!-- Subtle Ambient Glow -->
+  <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-brand/10 rounded-full blur-3xl pointer-events-none -z-10"></div>
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Section Header -->
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-900/40 border border-purple-500/30 text-xs font-semibold text-brand-soft mb-4">
+        <span>GLOBAL NETWORK INFRASTRUCTURE</span>
+      </div>
+      <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white tracking-tight mb-4">
+        连接你真正需要的地区
+      </h2>
+      <p class="text-base sm:text-lg text-gray-300">
+        不堆砌虚幻的节点数量。我们聚焦配置最常用、稳定性要求最高的 5 大核心地区。
+      </p>
+    </div>
+
+    <!-- Interactive World Map Visual Container -->
+    <div class="relative bg-gradient-to-b from-[#14062f] to-[#0d0422] border border-purple-800/40 rounded-3xl p-6 sm:p-10 mb-12 shadow-2xl overflow-hidden">
+      
+      <!-- Tech Grid Lines Overlay -->
+      <div class="absolute inset-0 bg-network-grid-dense opacity-40 pointer-events-none"></div>
+
+      <!-- Simplified Clean World Vector Map (Custom SVG Dot Matrix) -->
+      <div class="relative w-full aspect-[2/1] max-h-[380px] flex items-center justify-center">
+        
+        <svg class="w-full h-full text-purple-900/40" viewBox="0 0 1000 500" fill="currentColor">
+          <!-- Continents Silhouette Dot Grids -->
+          <g fill="rgba(139, 92, 246, 0.18)">
+            <!-- North America -->
+            <ellipse cx="230" cy="180" rx="140" ry="80" />
+            <circle cx="210" cy="220" r="50" />
+            <!-- South America -->
+            <ellipse cx="320" cy="340" rx="60" ry="100" />
+            <!-- Europe -->
+            <ellipse cx="510" cy="160" rx="60" ry="50" />
+            <!-- Africa -->
+            <ellipse cx="530" cy="280" rx="70" ry="90" />
+            <!-- Asia -->
+            <ellipse cx="730" cy="180" rx="150" ry="90" />
+            <ellipse cx="780" cy="260" rx="90" ry="60" />
+            <!-- Australia -->
+            <ellipse cx="840" cy="380" rx="60" ry="40" />
+          </g>
+
+          <!-- Inter-node Network Arc Lines -->
+          <g stroke="rgba(168, 85, 247, 0.35)" stroke-dasharray="4 4" fill="none" stroke-width="1.5">
+            <path d="M 740 230 Q 765 190 790 200" /> <!-- HK to JP -->
+            <path d="M 740 230 Q 755 250 770 240" /> <!-- HK to TW -->
+            <path d="M 740 230 Q 740 290 750 310" /> <!-- HK to SG -->
+            <path d="M 790 200 Q 520 80 250 190" /> <!-- JP to US Pacific link -->
+          </g>
+        </svg>
+
+        <!-- Node Pulse Pins (Placed accurately on relative coordinates) -->
+        
+        <!-- Node 1: Hong Kong (74%, 46%) -->
+        <div class="absolute left-[72%] top-[45%] -translate-x-1/2 -translate-y-1/2 group cursor-pointer">
+          <div class="relative flex items-center justify-center">
+            <span class="animate-ping absolute inline-flex h-7 w-7 rounded-full bg-brand-glow opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-3.5 w-3.5 bg-emerald-400 border-2 border-slate-900"></span>
+          </div>
+          <div class="absolute -top-8 left-1/2 -translate-x-1/2 bg-slate-900/95 border border-purple-500/50 text-white text-[11px] font-bold px-2 py-0.5 rounded shadow-lg whitespace-nowrap">
+            🇭🇰 香港 (HK)
+          </div>
+        </div>
+
+        <!-- Node 2: Taiwan (76%, 47%) -->
+        <div class="absolute left-[77%] top-[47%] -translate-x-1/2 -translate-y-1/2 group cursor-pointer hidden sm:block">
+          <div class="relative flex items-center justify-center">
+            <span class="relative inline-flex rounded-full h-3 w-3 bg-brand-glow border-2 border-slate-900"></span>
+          </div>
+          <div class="absolute -bottom-7 left-1/2 -translate-x-1/2 bg-slate-900/90 border border-purple-500/40 text-gray-200 text-[10px] font-medium px-1.5 py-0.5 rounded shadow whitespace-nowrap">
+            🇹🇼 台湾 (TW)
+          </div>
+        </div>
+
+        <!-- Node 3: Japan (79%, 39%) -->
+        <div class="absolute left-[80%] top-[39%] -translate-x-1/2 -translate-y-1/2 group cursor-pointer">
+          <div class="relative flex items-center justify-center">
+            <span class="animate-ping absolute inline-flex h-6 w-6 rounded-full bg-purple-400 opacity-60"></span>
+            <span class="relative inline-flex rounded-full h-3.5 w-3.5 bg-brand-glow border-2 border-slate-900"></span>
+          </div>
+          <div class="absolute -top-8 left-1/2 -translate-x-1/2 bg-slate-900/95 border border-purple-500/50 text-white text-[11px] font-bold px-2 py-0.5 rounded shadow-lg whitespace-nowrap">
+            🇯🇵 日本 (JP)
+          </div>
+        </div>
+
+        <!-- Node 4: Singapore (74%, 62%) -->
+        <div class="absolute left-[74%] top-[62%] -translate-x-1/2 -translate-y-1/2 group cursor-pointer">
+          <div class="relative flex items-center justify-center">
+            <span class="relative inline-flex rounded-full h-3.5 w-3.5 bg-brand-glow border-2 border-slate-900"></span>
+          </div>
+          <div class="absolute -bottom-8 left-1/2 -translate-x-1/2 bg-slate-900/95 border border-purple-500/50 text-white text-[11px] font-bold px-2 py-0.5 rounded shadow-lg whitespace-nowrap">
+            🇸🇬 新加坡 (SG)
+          </div>
+        </div>
+
+        <!-- Node 5: United States (25%, 38%) -->
+        <div class="absolute left-[25%] top-[38%] -translate-x-1/2 -translate-y-1/2 group cursor-pointer">
+          <div class="relative flex items-center justify-center">
+            <span class="animate-ping absolute inline-flex h-7 w-7 rounded-full bg-accent opacity-60"></span>
+            <span class="relative inline-flex rounded-full h-3.5 w-3.5 bg-accent border-2 border-slate-900"></span>
+          </div>
+          <div class="absolute -top-8 left-1/2 -translate-x-1/2 bg-slate-900/95 border border-accent/60 text-accent text-[11px] font-bold px-2 py-0.5 rounded shadow-lg whitespace-nowrap">
+            🇺🇸 美国 (US)
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Quick Region Counter Strip -->
+      <div class="mt-6 pt-6 border-t border-purple-800/40 grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+        <div>
+          <span class="text-xs text-gray-400 block">亚太核心节点</span>
+          <span class="font-mono text-lg sm:text-xl font-bold text-white">4 个高频地区</span>
+        </div>
+        <div>
+          <span class="text-xs text-gray-400 block">北美骨干节点</span>
+          <span class="font-mono text-lg sm:text-xl font-bold text-white">1 个主流地区</span>
+        </div>
+        <div>
+          <span class="text-xs text-gray-400 block">节点协议适配</span>
+          <span class="font-mono text-lg sm:text-xl font-bold text-brand-soft">多协议自动识别</span>
+        </div>
+        <div>
+          <span class="text-xs text-gray-400 block">节点状态监控</span>
+          <span class="font-mono text-lg sm:text-xl font-bold text-emerald-400 flex items-center justify-center gap-1.5">
+            <span class="w-2 h-2 rounded-full bg-emerald-400 inline-block animate-pulse"></span>
+            实时在线 (Active)
+          </span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- 5 Node Detail Cards -->
+    <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4">
+      {nodesList.map((item) => (
+        <div class="glass-card rounded-2xl p-5 flex flex-col justify-between hover:border-brand-glow/50 transition-all duration-300">
+          <div>
+            <!-- Header flag and status -->
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-2xl">{item.flag}</span>
+              <span class="text-[10px] font-mono font-bold px-2 py-0.5 bg-emerald-950/70 text-emerald-300 border border-emerald-600/40 rounded-full flex items-center gap-1">
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+                {item.status}
+              </span>
+            </div>
+
+            <!-- Region Name -->
+            <h3 class="text-base font-bold text-white mb-0.5">{item.region}</h3>
+            <span class="text-[11px] font-mono text-brand-soft/70 block mb-2">{item.en}</span>
+            <span class="inline-block text-[11px] font-semibold text-accent/90 bg-accent/10 px-2 py-0.5 rounded mb-3">
+              {item.badge}
+            </span>
+
+            <p class="text-xs text-gray-300 leading-relaxed mb-4">
+              {item.desc}
+            </p>
+          </div>
+
+          <!-- Feature Bullets -->
+          <div class="space-y-1.5 pt-3 border-t border-purple-900/30 text-[11px] text-gray-400">
+            {item.features.map((feat) => (
+              <div class="flex items-center gap-1.5">
+                <span class="text-brand-glow text-xs">✓</span>
+                <span>{feat}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <!-- Node Bottom Action -->
+    <div class="mt-12 text-center">
+      <a
+        href={SITE_CONFIG.registerUrl}
+        target={SITE_CONFIG.target}
+        rel={SITE_CONFIG.rel}
+        class="inline-flex items-center gap-2 px-7 py-3.5 bg-brand hover:bg-brand-light text-white font-bold text-sm rounded-xl transition-all shadow-glow-purple"
+      >
+        <span>立即获取节点订阅</span>
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+        </svg>
+      </a>
+    </div>
+
+  </div>
+</section>

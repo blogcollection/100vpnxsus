@@ -1,0 +1,98 @@
+---
+export interface FAQItem {
+  question: string;
+  answer: string;
+}
+
+export const FAQ_LIST: FAQItem[] = [
+  {
+    question: "XSUS 是什么？",
+    answer: "XSUS 是一个面向中文用户的网络加速与代理订阅服务品牌，提供香港、台湾、日本、新加坡、美国等常用地区节点，兼容 Clash、Shadowrocket 等主流代理软件，致力于为日常办公、学习与网页浏览提供稳定省心的网络连接。"
+  },
+  {
+    question: "十八线小机场是什么？",
+    answer: "“十八线小机场”是 XSUS 的品牌副标题与自嘲式定位。我们不追求庞大浮夸的营销叙事，而是脚踏实地专注于做好日常核心节点的稳定性、通用客户端兼容性与清晰的使用体验，把网络连接做好。"
+  },
+  {
+    question: "XSUS 支持哪些地区？",
+    answer: "XSUS 精选配置了中文用户最高频使用的 5 大核心地区节点：香港（Hong Kong）、台湾（Taiwan）、日本（Japan - Tokyo）、新加坡（Singapore）以及美国（United States）。"
+  },
+  {
+    question: "XSUS 支持 Clash 吗？",
+    answer: "完全支持。XSUS 提供标准的 Clash 订阅链接，兼容 Clash Verge、Clash for Windows、Clash Meta（Mihomo 内核）等各类主流桌面与移动客户端。"
+  },
+  {
+    question: "XSUS 支持 Shadowrocket（小火箭）吗？",
+    answer: "完全支持。iOS 用户只需在后台复制专属订阅链接或直接扫描二维码，即可一键将所有节点与分流规则导入 Shadowrocket 客户端中使用。"
+  },
+  {
+    question: "机场和传统 VPN 有什么区别？",
+    answer: "传统 VPN 通常是全流量全局接管，所有本地流量都会绕道国外，导致国内网站访问变慢甚至卡顿；而以 Clash、Shadowrocket 为代表的“机场”代理体系支持智能规则分流，国内网站直连不消耗流量，海外请求走对应节点，体验更流畅智能。"
+  },
+  {
+    question: "机场订阅是什么？",
+    answer: "机场订阅是一串专用的网络链接（URL）。将该链接填入代理客户端后，客户端会自动从服务器拉取最新的节点配置、端口与密钥。当服务器节点维护或更新时，客户端点击更新即可一键同步最新节点，无需手动逐个添加。"
+  },
+  {
+    question: "Clash Verge 怎么导入机场订阅？",
+    answer: "在 XSUS 用户中心复制 Clash 订阅链接；打开 Clash Verge 客户端，点击左侧『订阅 / Profiles』；在上方输入框粘贴订阅链接并点击『导入 / Import』；导入成功后右键选择该配置为激活状态，并在『代理 / Proxies』中选择对应节点即可。"
+  },
+  {
+    question: "应该选择香港、日本还是新加坡节点？",
+    answer: "建议日常网页浏览、低延迟即时通讯优先选择物理距离最近的【香港】节点；观看高清视频、跨国协作办公可选择出口带宽充裕的【日本】或【新加坡】节点；访问美国本土学术或企业系统可选择【美国】节点。"
+  },
+  {
+    question: "节点延迟越低越好吗？",
+    answer: "低延迟（如 30-50ms）代表点击响应更敏捷，但对于看视频、下载大文件等吞吐量场景，节点的带宽冗余与丢包率比单纯的几毫秒延迟差距更重要。建议以实际使用流畅度为主要参考。"
+  },
+  {
+    question: "使用机场需要什么软件？",
+    answer: "根据操作系统不同，常用软件包括：Windows 推荐 Clash Verge / v2rayN；macOS 推荐 Clash Verge / ClashX Meta；iOS 推荐 Shadowrocket；Android 推荐 Clash Meta for Android / v2rayNG。XSUS 用户中心提供详细配套指引。"
+  },
+  {
+    question: "XSUS 套餐多少钱？",
+    answer: "XSUS 提供不同规格的周期方案与流量配置。因套餐内容与优惠活动可能动态调整，具体套餐规格、可用流量及实时价格请以 XSUS 注册页面实时显示为准。"
+  }
+];
+---
+
+<section id="faq" class="py-20 lg:py-28 bg-[#0c0420] relative">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Section Header -->
+    <div class="text-center max-w-2xl mx-auto mb-16">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-900/40 border border-purple-500/30 text-xs font-semibold text-brand-soft mb-4">
+        <span>FREQUENTLY ASKED QUESTIONS</span>
+      </div>
+      <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white tracking-tight mb-4">
+        常见问题与解答
+      </h2>
+      <p class="text-base sm:text-lg text-gray-300">
+        汇集用户最关心的节点配置、客户端使用与订阅相关疑问。
+      </p>
+    </div>
+
+    <!-- Accordion List -->
+    <div class="space-y-4">
+      {FAQ_LIST.map((faq, index) => (
+        <details class="glass-card rounded-2xl group border border-purple-900/40 overflow-hidden transition-all duration-200 open:border-purple-500/40 open:bg-purple-950/40">
+          <summary class="flex items-center justify-between p-5 sm:p-6 cursor-pointer list-none select-none text-left">
+            <span class="text-base sm:text-lg font-bold text-white group-hover:text-brand-soft transition-colors flex items-center gap-3">
+              <span class="font-mono text-sm font-semibold text-brand-glow">Q{index + 1}.</span>
+              {faq.question}
+            </span>
+            <span class="w-8 h-8 rounded-full bg-purple-900/40 border border-purple-600/30 flex items-center justify-center text-purple-300 group-open:rotate-180 transition-transform duration-200 shrink-0 ml-4">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </span>
+          </summary>
+          <div class="px-5 pb-6 sm:px-6 sm:pb-6 text-sm text-gray-300 leading-relaxed border-t border-purple-900/20 pt-4">
+            <p>{faq.answer}</p>
+          </div>
+        </details>
+      ))}
+    </div>
+
+  </div>
+</section>

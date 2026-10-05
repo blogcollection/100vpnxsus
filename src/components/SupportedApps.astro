@@ -1,0 +1,142 @@
+---
+import { SITE_CONFIG } from '../config/site';
+
+const apps = [
+  {
+    name: 'Clash Verge',
+    platform: 'Windows / macOS / Linux',
+    type: '桌面端推荐',
+    desc: '基于 Tauri 架构打造的现代代理客户端，界面优雅直观，支持完整规则分流与延迟测试。',
+    protocols: ['Clash 订阅', 'Meta 内核', '规则分流'],
+    iconBg: 'from-blue-600 to-indigo-700',
+    iconLetter: 'CV'
+  },
+  {
+    name: 'Clash Meta',
+    platform: 'Android / Windows / macOS',
+    type: '全能跨平台',
+    desc: '集成 Mihomo / Clash.Meta 高级内核，支持更丰富的加密传输协议与精细化规则分流策略。',
+    protocols: ['Mihomo 内核', '全协议适配', '分流切换'],
+    iconBg: 'from-purple-600 to-violet-800',
+    iconLetter: 'CM'
+  },
+  {
+    name: 'Shadowrocket',
+    platform: 'iOS / iPadOS',
+    type: '苹果端首选 (小火箭)',
+    desc: 'iOS 平台上久经考验的高性能代理工具，支持扫码导入与一键订阅更新，省电且运行稳定。',
+    protocols: ['一键扫码', '规则过滤', '按需连接'],
+    iconBg: 'from-sky-500 to-blue-600',
+    iconLetter: 'SR'
+  },
+  {
+    name: 'V2Ray / v2rayN / v2rayNG',
+    platform: 'Windows / Android',
+    type: '经典通用客户端',
+    desc: '生态成熟、兼容性广泛的通用代理客户端，适合各类 Windows 办公电脑与安卓移动设备。',
+    protocols: ['通用节点导入', '路由设置', '轻量运行'],
+    iconBg: 'from-emerald-600 to-teal-800',
+    iconLetter: 'V2'
+  },
+  {
+    name: 'Trojan / 其它通用协议',
+    platform: 'Windows / macOS / Android / iOS',
+    type: '协议标准化适配',
+    desc: '原生标准协议支持，可无缝对接各类支持通用订阅与节点的第三方代理客户端。',
+    protocols: ['标准订阅', 'TLS 加密', '跨平台兼容'],
+    iconBg: 'from-amber-600 to-orange-700',
+    iconLetter: 'TR'
+  },
+];
+---
+
+<section id="clients" class="py-20 lg:py-28 bg-[#0c0420] relative">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Section Header -->
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white tracking-tight mb-4">
+        你常用的客户端，基本都能找到
+      </h2>
+      <p class="text-base sm:text-lg text-gray-300">
+        XSUS 提供标准通用订阅链接，广泛兼容各类常见主流代理软件，无需被迫更换习惯的工具。
+      </p>
+    </div>
+
+    <!-- App Cards Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {apps.map((app) => (
+        <div class="glass-card rounded-2xl p-6 flex flex-col justify-between hover:border-purple-400/40 transition-all duration-300 group">
+          <div>
+            <!-- Top App Header -->
+            <div class="flex items-start gap-4 mb-4">
+              <div class={`w-12 h-12 rounded-xl bg-gradient-to-br ${app.iconBg} flex items-center justify-center text-white font-mono font-black text-lg shrink-0 shadow-md`}>
+                {app.iconLetter}
+              </div>
+              <div class="flex-1 min-w-0">
+                <div class="flex items-center justify-between gap-2">
+                  <h3 class="text-lg font-bold text-white group-hover:text-brand-soft transition-colors truncate">
+                    {app.name}
+                  </h3>
+                  <span class="text-[10px] font-medium bg-purple-900/60 text-brand-soft px-2 py-0.5 rounded border border-purple-700/30 shrink-0">
+                    {app.type}
+                  </span>
+                </div>
+                <p class="text-xs text-brand-soft/80 font-mono mt-0.5">{app.platform}</p>
+              </div>
+            </div>
+
+            <!-- Description -->
+            <p class="text-xs sm:text-sm text-gray-300 leading-relaxed mb-6">
+              {app.desc}
+            </p>
+          </div>
+
+          <!-- Feature Tags -->
+          <div class="flex flex-wrap gap-2 pt-4 border-t border-purple-900/30">
+            {app.protocols.map((proto) => (
+              <span class="px-2 py-1 text-[11px] bg-[#14062f] text-gray-300 rounded-md border border-purple-800/40 font-mono">
+                {proto}
+              </span>
+            ))}
+          </div>
+        </div>
+      ))}
+      
+      <!-- Summary / Guidance Card -->
+      <div class="glass-card-elevated rounded-2xl p-6 flex flex-col justify-between border-dashed border-purple-500/40">
+        <div>
+          <div class="w-12 h-12 rounded-xl bg-purple-900/60 border border-purple-500/40 flex items-center justify-center text-accent mb-4">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+          </div>
+          <h3 class="text-lg font-bold text-white mb-2">如何获取订阅链接？</h3>
+          <p class="text-xs sm:text-sm text-gray-300 leading-relaxed mb-4">
+            注册并开通 XSUS 后，可在用户中心直接一键复制 Clash、Shadowrocket 或通用订阅 URL，根据指引导入即刻使用。
+          </p>
+        </div>
+
+        <a
+          href={SITE_CONFIG.registerUrl}
+          target={SITE_CONFIG.target}
+          rel={SITE_CONFIG.rel}
+          class="w-full inline-flex items-center justify-center gap-2 py-3 bg-accent hover:bg-accent-hover text-slate-950 font-bold text-sm rounded-xl transition-all shadow-glow-gold"
+        >
+          <span>进入 XSUS 用户中心</span>
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- Client Notice -->
+    <div class="mt-8 text-center">
+      <p class="text-xs text-gray-400">
+        * 注：XSUS 提供标准的订阅转换与节点接入服务，客户端软件由各开源社区及开发者独立维护。
+      </p>
+    </div>
+
+  </div>
+</section>

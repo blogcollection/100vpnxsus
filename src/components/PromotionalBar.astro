@@ -1,0 +1,34 @@
+---
+import { SITE_CONFIG } from '../config/site';
+---
+
+<div class="w-full bg-[#18073A] border-b border-brand-deep/30 text-xs sm:text-sm text-gray-200 py-2 sm:py-2.5 px-4 relative z-50">
+  <div class="max-w-7xl mx-auto flex items-center justify-between gap-3">
+    <!-- Left / Center Promo Notice -->
+    <div class="flex items-center gap-2 overflow-hidden">
+      <span class="inline-flex items-center justify-center px-2 py-0.5 text-[11px] font-semibold tracking-wide bg-brand/30 text-brand-soft border border-brand-light/30 rounded-full shrink-0">
+        NOTICE
+      </span>
+      <p class="truncate font-medium text-gray-200">
+        <span class="text-brand-glow font-semibold">XSUS 十八线小机场</span>
+        <span class="text-gray-400 mx-1 hidden sm:inline">·</span>
+        <span class="text-gray-300">简单一点，稳定一点。常用地区节点即开即用。</span>
+      </p>
+    </div>
+
+    <!-- Right Yellow Capsule CTA Button -->
+    <div class="shrink-0">
+      <a
+        href={SITE_CONFIG.registerUrl}
+        target={SITE_CONFIG.target}
+        rel={SITE_CONFIG.rel}
+        class="inline-flex items-center gap-1.5 px-3.5 py-1 sm:py-1.5 bg-accent hover:bg-accent-hover active:bg-accent-dark text-slate-950 font-bold text-xs rounded-full transition-all duration-200 shadow-sm hover:shadow-glow-gold"
+      >
+        <span>立即体验</span>
+        <svg class="w-3.5 h-3.5 transition-transform group-hover:translate-x-0.5" width="14" height="14" viewBox="0 0 16 16" fill="currentColor">
+          <path fill-rule="evenodd" d="M6.22 3.22a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.75.75 0 0 1-1.06-1.06L9.94 8 6.22 4.28a.75.75 0 0 1 0-1.06z" clip-rule="evenodd" />
+        </svg>
+      </a>
+    </div>
+  </div>
+</div>

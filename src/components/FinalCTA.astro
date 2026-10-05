@@ -1,0 +1,74 @@
+---
+import { SITE_CONFIG } from '../config/site';
+---
+
+<section class="py-20 lg:py-28 bg-[#080318] relative overflow-hidden bg-network-grid">
+  <!-- Dynamic Glow Background -->
+  <div class="absolute inset-0 radial-glow-cta pointer-events-none"></div>
+
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+    
+    <!-- Outer Card Frame -->
+    <div class="bg-gradient-to-b from-[#1c0842] to-[#12052c] border border-purple-500/40 rounded-3xl p-8 sm:p-14 lg:p-16 shadow-dashboard relative overflow-hidden">
+      
+      <!-- Inner Grid Background Decoration -->
+      <div class="absolute inset-0 bg-network-grid-dense opacity-30 pointer-events-none"></div>
+      
+      <!-- Center Glowing Orbital Element -->
+      <div class="w-20 h-20 sm:w-24 sm:h-24 mx-auto rounded-3xl bg-gradient-to-tr from-brand-deep via-brand to-brand-glow p-1 shadow-glow-purple-lg mb-8 animate-float">
+        <div class="w-full h-full bg-[#100526] rounded-[22px] flex items-center justify-center">
+          <svg class="w-10 h-10 sm:w-12 sm:h-12" viewBox="0 0 40 40" fill="none">
+            <path d="M10 10L30 30M30 10L10 30" stroke="#A855F7" stroke-width="3.5" stroke-linecap="round"/>
+            <circle cx="20" cy="20" r="4" fill="#100526" stroke="#7C3AED" stroke-width="2"/>
+            <circle cx="20" cy="20" r="2" fill="#FFB800"/>
+            <circle cx="10" cy="10" r="2.5" fill="#C084FC"/>
+            <circle cx="30" cy="10" r="2.5" fill="#C084FC"/>
+            <circle cx="10" cy="30" r="2.5" fill="#C084FC"/>
+            <circle cx="30" cy="30" r="2.5" fill="#FFB800"/>
+          </svg>
+        </div>
+      </div>
+
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight mb-6">
+        准备连接 XSUS？
+      </h2>
+      
+      <p class="text-base sm:text-lg text-gray-300 max-w-xl mx-auto mb-10 leading-relaxed">
+        选择适合你的套餐，开启稳定、省心的日常网络连接体验。常用地区节点已就绪。
+      </p>
+
+      <!-- CTA Action Button -->
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a
+          href={SITE_CONFIG.registerUrl}
+          target={SITE_CONFIG.target}
+          rel={SITE_CONFIG.rel}
+          class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-10 py-4 sm:py-5 bg-accent hover:bg-accent-hover active:bg-accent-dark text-slate-950 font-extrabold text-lg rounded-2xl transition-all shadow-glow-gold hover:-translate-y-1 active:translate-y-0"
+        >
+          <span>立即使用 XSUS</span>
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+          </svg>
+        </a>
+      </div>
+
+      <!-- Trust Note Footer -->
+      <div class="mt-8 flex flex-wrap items-center justify-center gap-6 text-xs text-brand-soft/80">
+        <span class="flex items-center gap-1.5">
+          <svg class="w-4 h-4 text-emerald-400" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+          常用地区节点支持
+        </span>
+        <span class="flex items-center gap-1.5">
+          <svg class="w-4 h-4 text-emerald-400" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+          一键通用订阅
+        </span>
+        <span class="flex items-center gap-1.5">
+          <svg class="w-4 h-4 text-emerald-400" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+          全平台客户端兼容
+        </span>
+      </div>
+
+    </div>
+
+  </div>
+</section>

@@ -1,0 +1,78 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import PromotionalBar from '../../components/PromotionalBar.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+---
+
+<Layout
+  title="服务条款 - XSUS 十八线小机场"
+  description="XSUS 服务条款：了解使用 XSUS 节点订阅与网络加速服务的权利、义务与合规守则。"
+  canonicalUrl="https://vpnxsus.homes/terms/"
+>
+  <PromotionalBar />
+  <Header />
+
+  <main class="py-16 sm:py-24 bg-[#080318] relative bg-network-grid">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="glass-card rounded-3xl p-8 sm:p-12 border border-purple-800/40">
+        <h1 class="text-3xl sm:text-4xl font-extrabold text-white mb-6">
+          服务条款 (Terms of Service)
+        </h1>
+        <p class="text-xs sm:text-sm text-brand-soft/70 mb-8 font-mono">
+          生效日期：2026 年 10 月
+        </p>
+
+        <div class="space-y-6 text-sm text-gray-300 leading-relaxed">
+          <section>
+            <h2 class="text-lg font-bold text-white mb-2">1. 服务的接受与使用准则</h2>
+            <p>
+              当您注册、订购或使用 XSUS 服务时，即表示您已阅读并同意遵守本服务条款。用户承诺在合法合规的前提下使用本网络加速服务，严禁利用本服务从事任何危害国家安全、侵犯他人合法权益、网络攻击（如 DDoS、扫描弱密码）或传播非法内容的活动。
+            </p>
+          </section>
+
+          <section>
+            <h2 class="text-lg font-bold text-white mb-2">2. 账户安全与订阅管理</h2>
+            <p>
+              用户有责任妥善保管自己的订阅链接与账户凭据。不得公开分享、转售或滥用订阅链接。如发现异常大流量滥用或多点滥扫，系统有权暂时限制访问以保障整体集群网络质量。
+            </p>
+          </section>
+
+          <section>
+            <h2 class="text-lg font-bold text-white mb-2">3. 服务可用性与维护</h2>
+            <p>
+              XSUS 致力于保障节点集群的高可用运行，但受国际海底光缆中断、跨国运营商网络抖动、机房例行维护等不可抗力因素影响，服务可能存在短暂波动。我们将尽力提前公告维护计划并快速恢复。
+            </p>
+          </section>
+
+          <section>
+            <h2 class="text-lg font-bold text-white mb-2">4. 费用与退款政策</h2>
+            <p>
+              所有服务套餐的具体规格与计费周期均以订单结算页面为准。鉴于数字化带宽资源的即时交付属性，相关退款处理将依据平台公布的具体细则执行。
+            </p>
+          </section>
+
+          <section>
+            <h2 class="text-lg font-bold text-white mb-2">5. 条款修改</h2>
+            <p>
+              XSUS 有权在必要时修订本条款，并在网站公示生效。若您继续使用服务，则视为接受修改后的服务条款。
+            </p>
+          </section>
+        </div>
+
+        <div class="mt-10 pt-6 border-t border-purple-900/30 flex justify-between items-center">
+          <a href="/" class="text-sm font-semibold text-brand-soft hover:text-white transition-colors">
+            ← 返回 XSUS 首页
+          </a>
+          <a href="https://yinxingren1.invisibleaff.com/#/register?code=Gcp1CRso" target="_blank" rel="nofollow sponsored noopener noreferrer" class="text-sm font-bold text-accent hover:underline">
+            进入用户中心 →
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <Footer />
+</Layout>
